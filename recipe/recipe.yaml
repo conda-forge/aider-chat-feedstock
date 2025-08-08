@@ -1,6 +1,6 @@
 context:
   name: aider-chat
-  version: "0.85.1"
+  version: "0.85.5"
   python_min: "3.10"
 
 package:
@@ -10,7 +10,7 @@ package:
 source:
   # url: https://github.com/Aider-AI/aider/archive/refs/tags/v${{ version }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 026c95fd85cb6d24d262e31c15d4126a5434f91f4bfe9aae74e5008a955155b1
+  sha256: 5bd0a9e48acb56a6ca00589cdce4e9f450b11b8721230ae4230fca0f86e475a6
   patches:
     - patches/downgrade-protobuf-requirements.txt.patch
 
@@ -21,7 +21,7 @@ build:
       - ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
     env:
       SETUPTOOLS_SCM_PRETEND_VERSION: ${{ version }}
-  number: 1
+  number: 0
   python:
     entry_points:
       - aider = aider.main:main
@@ -116,19 +116,8 @@ tests:
         then:
           - cp -r aider/website ${CONDA_PREFIX}/lib/python${{ python_min }}/site-packages/aider
           # A few tests fail
-          - (AIDER_ANALYTICS=false python -m pytest tests/ -k "not test_model_accepts_settings_attribute and not
-                    TestRepoMapAllLanguages and not
-                    test_no_verify_ssl_sets_model_info_manager and not
-                    test_scrape_with_playwright_error_handling and not
-                    test_deprecated_args_show_warnings and not
-                    test_model_alias_in_warning and not
-                    test_get_repo_map_with_identifiers and not
-                    test_repo_map_refresh_auto and not
-                    test_repo_map_refresh_files and not
-                    test_no_verify_ssl_flag_sets_model_info_manager and not
-                    test_cmd_web_imports_playwright and not
-                    test_scrape_actual_url_with_playwright and not
-                    test_scrape_self_signed_ssl") || true
+          - (AIDER_ANALYTICS=false python -m pytest tests/ -k "not test_model_accepts_settings_attribute and not TestRepoMapAllLanguages and not test_no_verify_ssl_sets_model_info_manager and not test_scrape_with_playwright_error_handling and not test_deprecated_args_show_warnings and not test_model_alias_in_warning and
+            not test_get_repo_map_with_identifiers and not test_repo_map_refresh_auto and not test_repo_map_refresh_files and not test_no_verify_ssl_flag_sets_model_info_manager and not test_cmd_web_imports_playwright and not test_scrape_actual_url_with_playwright and not test_scrape_self_signed_ssl") || true
     requirements:
       run:
         - botocore
