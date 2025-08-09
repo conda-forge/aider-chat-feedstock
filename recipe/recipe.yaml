@@ -90,7 +90,7 @@ requirements:
     - PyYAML
     - rich >=14.1.0
     - rpds-py ==0.27.0
-    - scipy >=1.15.3
+    - scipy >=1.15.2
     - shtab
     - smmap
     - socksio
