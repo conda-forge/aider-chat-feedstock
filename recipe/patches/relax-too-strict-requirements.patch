@@ -1,0 +1,7 @@
+--- requirements.txt
++++ requirements.txt
+@@ -413,3 +413,3 @@
+     #   google-auth
+-scipy==1.15.3
++scipy==1.15.2
+     # via

@@ -12,7 +12,8 @@ source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
   sha256: 5bd0a9e48acb56a6ca00589cdce4e9f450b11b8721230ae4230fca0f86e475a6
   patches:
-    # - patches/downgrade-protobuf-requirements.txt.patch
+    # upstream automatically update its requirements.txt and has strict == matching
+    - patches/relax-too-strict-requirements.patch
 
 build:
   noarch: python
