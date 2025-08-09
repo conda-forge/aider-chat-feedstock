@@ -46,7 +46,7 @@ requirements:
     - frozenlist ==1.7.0
     - gitdb
     - gitpython
-    - google-ai-generativelanguage
+    - google-ai-generativelanguage >=0.6.15
     - google-api-core
     - google-api-python-client ==2.178.0
     - google-auth ==2.40.3
@@ -54,7 +54,7 @@ requirements:
     - google-generativeai
     - googleapis-common-protos
     - grep-ast ==0.9.0
-    - grpcio >=1.74.0
+    - grpcio >=1.65.0
     - grpcio-status >=1.71.2
     - huggingface_hub ==0.34.3
     - importlib-metadata <8.0.0
