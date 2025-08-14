@@ -58,9 +58,10 @@ requirements:
     - huggingface_hub ==0.34.3
     - importlib-metadata <8.0.0
     - importlib-resources
-    - json5
+    - json5 >=0.12.1
     - jsonschema
     - litellm ==1.75.0
+    - markdown-it-py >=4.0.0
     - mccabe
     - mixpanel
     - multidict ==6.6.3
