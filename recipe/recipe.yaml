@@ -1,6 +1,6 @@
 context:
   name: aider-chat
-  version: "0.86.0"
+  version: "0.86.1"
   python_min: "3.10"
 
 package:
@@ -10,7 +10,7 @@ package:
 source:
   # url: https://github.com/Aider-AI/aider/archive/refs/tags/v${{ version }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 8bd50e1ab4f813b3637bb11c7b9504fca081b5316bfa79678fd9c5992c9bf0b7
+  sha256: 48e489d20a4dfdd90ac4acc781f0170f688aaa5c5f2017d035e2d947fb801bbb
   patches:
     - patches/relax-requirements.patch
 
@@ -58,9 +58,10 @@ requirements:
     - huggingface_hub ==0.34.3
     - importlib-metadata <8.0.0
     - importlib-resources
-    - json5
+    - json5 ==0.12.0
     - jsonschema
     - litellm ==1.75.0
+    - markdown-it-py ==3.0.0
     - mccabe
     - mixpanel
     - multidict ==6.6.3
