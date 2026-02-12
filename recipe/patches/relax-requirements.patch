@@ -1,51 +1,81 @@
 --- a/requirements.txt
 +++ b/requirements.txt
-@@ -31,3 +31,3 @@
+@@ -100,7 +100,7 @@ flake8==7.3.0
+     # via
+     #   -c requirements/common-constraints.txt
+     #   -r requirements/requirements.in
+-frozenlist==1.8.0
++frozenlist>=1.7.0
+     # via
+     #   -c requirements/common-constraints.txt
      #   aiohttp
--charset-normalizer==3.4.2
-+charset-normalizer>=3.4.0
+@@ -125,7 +125,7 @@ h11==0.16.0
      # via
-@@ -108,3 +108,3 @@
-     #   grpcio-status
--grpcio==1.74.0
-+grpcio>=1.62.0,<1.74.0
+     #   -c requirements/common-constraints.txt
+     #   httpcore
+-hf-xet==1.2.0
++hf-xet>=1.2.0
      # via
-@@ -111,3 +111,3 @@
-     #   google-api-core
--grpcio-status==1.71.2
-+grpcio-status>=1.71.0
+     #   -c requirements/common-constraints.txt
+     #   huggingface-hub
+@@ -209,7 +209,7 @@ mslex==1.3.0
      # via
-@@ -165,3 +165,3 @@
-     #   yarl
--propcache==0.3.2
+     #   -c requirements/common-constraints.txt
+     #   oslex
+-multidict==6.7.1
++multidict>=6.7.0
+     # via
+     #   -c requirements/common-constraints.txt
+     #   aiohttp
+@@ -227,7 +227,7 @@ openai==2.20.0
+     # via
+     #   -c requirements/common-constraints.txt
+     #   litellm
+-orjson==3.11.7
++orjson>=3.11.5
+     # via
+     #   -c requirements/common-constraints.txt
+     #   -r requirements/requirements.in
+@@ -261,7 +261,7 @@ prompt-toolkit==3.0.52
+     # via
+     #   -c requirements/common-constraints.txt
+     #   -r requirements/requirements.in
+-propcache==0.4.1
 +propcache>=0.3.1
      # via
-@@ -173,3 +173,3 @@
-     #   google-api-core
--protobuf==5.29.5
-+protobuf>=4.21.6,<6.0.0dev
-     # via
-@@ -223,3 +223,3 @@
-     #   tiktoken
--rich==14.1.0
-+rich>=13.9.4
-     # via
-@@ -233,3 +233,3 @@
      #   -c requirements/common-constraints.txt
+     #   aiohttp
+@@ -278,7 +278,7 @@ pycodestyle==2.14.0
+     # via
+     #   -c requirements/common-constraints.txt
+     #   flake8
+-pycparser==3.0
++pycparser>=2.22
+     # via
+     #   -c requirements/common-constraints.txt
+     #   cffi
+@@ -335,13 +335,13 @@ regex==2026.1.15
+     # via
+     #   -c requirements/common-constraints.txt
+     #   tiktoken
+-requests==2.32.5
++requests>=2.32.3
+     # via
+     #   -c requirements/common-constraints.txt
+     #   mixpanel
+     #   posthog
+     #   tiktoken
+-rich==14.3.2
++rich>=13.7.1
+     # via
+     #   -c requirements/common-constraints.txt
+     #   -r requirements/requirements.in
+@@ -351,7 +351,7 @@ rpds-py==0.30.0
+     #   -c requirements/common-constraints.txt
+     #   jsonschema
+     #   referencing
 -scipy==1.15.3
 +scipy>=1.15.2
      # via
-@@ -271,3 +271,3 @@
-     #   requests
--tiktoken==0.10.0
-+tiktoken>=0.9.0
-     # via
-@@ -279,3 +279,3 @@
-     #   tree-sitter-language-pack
--tree-sitter-yaml==0.7.1
-+tree-sitter-yaml>=0.7.0
-     # via
-@@ -298,2 +298,0 @@
-     
--tree-sitter==0.23.2; python_version < "3.10"
--tree-sitter==0.24.0; python_version >= "3.10"
+     #   -c requirements/common-constraints.txt
+     #   -r requirements/requirements.in
