@@ -11,8 +11,8 @@ source:
   # url: https://github.com/Aider-AI/aider/archive/refs/tags/v${{ version }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
   sha256: f38a9d322f5609f0c13af82d50c6a11170185b3fdf26956e4a7e89ba19819159
-  # patches:
-  #   - patches/relax-requirements.patch
+  patches:
+    - patches/relax-requirements.patch
 
 build:
   noarch: python
@@ -33,16 +33,19 @@ requirements:
     - setuptools >=68
     - setuptools-scm
   run:
-    - aiohttp ==3.12.15
+    - aiohttp ==3.13.3
     - aiosignal ==1.4.0
+    - annotated-doc ==0.0.4
     - backoff
-    - beautifulsoup4 ==4.13.4
-    - certifi ==2025.8.3
+    - beautifulsoup4 ==4.14.3
+    - certifi ==2026.1.4
     - configargparse
     - diff-match-patch
     - diskcache
+    - fastapi ==0.128.8
+    - fastuuid ==0.14.0
     - flake8
-    - frozenlist ==1.7.0
+    - frozenlist >=1.7.0
     - gitdb
     - gitpython
     - google-ai-generativelanguage ==0.6.15
@@ -55,28 +58,32 @@ requirements:
     - grep-ast ==0.9.0
     - grpcio >=1.62.0,<1.74.0
     - grpcio-status
-    - huggingface_hub ==0.34.3
-    - importlib-metadata <8.0.0
+    - hf-xet >=1.2.0
+    - huggingface_hub ==1.4.1
+    - importlib-metadata ==7.2.1
     - importlib-resources
-    - json5 ==0.12.0
+    - json5 ==0.13.0
     - jsonschema
-    - litellm ==1.75.0
-    - markdown-it-py ==3.0.0
+    - litellm ==1.81.10
+    - markdown-it-py ==4.0.0
     - mccabe
     - mixpanel
-    - multidict ==6.6.3
+    - multidict >=6.7.0
     - networkx ==3.4.2
     - numpy ==1.26.4
-    - openai ==1.99.1
+    - openai ==2.20.0
+    - orjson >=3.11.5
     - oslex
-    - packaging ==25.0
+    - packaging ==26.0
     - pathspec
     - pexpect
-    - pillow ==11.3.0
-    - posthog ==6.4.1
-    - prompt_toolkit ==3.0.51
+    - pillow ==12.1.1
+    - posthog ==7.8.6
+    - prompt_toolkit ==3.0.52
+    - propcache >=0.3.1
     - protobuf >=4.21.6,<6.0.0dev
     - psutil
+    - pycparser >=2.22
     - pydub
     - pycodestyle
     - pydantic
@@ -88,20 +95,24 @@ requirements:
     - python >=${{ python_min }}
     - python-sounddevice
     - PyYAML
-    - rich
-    - rpds-py ==0.27.0
-    - scipy
+    - rich >=13.7.1
+    - rpds-py ==0.30.0
+    - scipy >=1.15.2
+    - shellingham ==1.5.4
     - shtab
     - smmap
     - socksio
     - python-sounddevice
     - soupsieve
-    - tokenizers ==0.21.4
+    - starlette ==0.52.1
+    - tokenizers ==0.22.2
     - tree-sitter-c-sharp
     - tree-sitter-embedded-template
-    - tree-sitter-language-pack ==0.9.0
-    - tree-sitter-yaml ==0.7.1
-    - typing-extensions ==4.14.1
+    - tree-sitter-language-pack ==0.13.0
+    - tree-sitter-yaml ==0.7.2
+    - typer ==0.23.0
+    - typer-slim ==0.23.0
+    - typing-extensions ==4.15.0
     - watchfiles
 
 tests:
