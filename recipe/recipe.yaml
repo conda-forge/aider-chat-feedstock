@@ -11,8 +11,8 @@ source:
   # url: https://github.com/Aider-AI/aider/archive/refs/tags/v${{ version }}.tar.gz
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
   sha256: f38a9d322f5609f0c13af82d50c6a11170185b3fdf26956e4a7e89ba19819159
-  patches:
-    - patches/relax-requirements.patch
+  # patches:
+  #   - patches/relax-requirements.patch
 
 build:
   noarch: python
